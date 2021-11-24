@@ -1,0 +1,17 @@
+ALGORITHM playing cards
+VAR
+    T : ARRAY_OF INTEGER[];
+    i,j,n,x:INTEGER;
+BEGIN
+ 
+    FOR i FROM 0 TO T.length-1  DO
+        x := T[i];
+        j := i-1;
+        WHILE (j>=0 && x < T[j]) DO
+            T[j+1] := T[j];
+            j:=j-1;
+        END_WHILE
+         T[j+1] := x;
+    END_FOR
+END
+
